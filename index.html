@@ -3,403 +3,509 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prihlásenie tímov do Niké TOP Ligy | Jeseň 2026</title>
-<meta name="description" content="Prihláste tím do jesennej Niké TOP Ligy v Bratislave. Prihlášky nových tímov prijímame do 31. augusta.">
+<title>Happy-Time · Súkromná materská škola s angličtinou v Ružinove</title>
+<meta name="description" content="Súkromná materská škola s rozšírenou výučbou angličtiny na Šumavskej ulici v Ružinove. Native speakeri, malé triedy, zdravá strava a krúžky v cene pre deti od 2 do 6 (7) rokov.">
+<!-- Náhľad/PPC landing page — obsah je takmer zhodný s happy-time.sk, indexovanie by klientke
+     robilo duplicitný obsah. Pri nasadení na vlastnú doménu tento riadok odstrániť. -->
 <meta name="robots" content="noindex, nofollow">
 
-<meta property="og:type" content="website">
-<meta property="og:locale" content="sk_SK">
-<meta property="og:title" content="Prihlásenie tímov do Niké TOP Ligy">
-<meta property="og:description" content="Prihlásky nových tímov do jesennej sezóny prijímame do 31. 8.">
-<meta property="og:url" content="https://go.topliga.sk/">
-<!-- Absolútna URL je pre Facebook povinná. Ak sa zmení doména, zmeň aj toto.
-     Obrázok sa dá pregenerovať zo zdroja assets/img/og-source.html. -->
-<meta property="og:image" content="https://go.topliga.sk/assets/img/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Niké TOP Liga — registrácie do jesennej sezóny 2026 sú otvorené">
-<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap&subset=latin,latin-ext" rel="stylesheet">
-<link rel="icon" href="assets/img/znak.png" type="image/png">
-<link rel="apple-touch-icon" href="assets/img/znak.png">
-<link rel="stylesheet" href="assets/css/style.css">
+<!-- ── Google Consent Mode v2 — musí ostať PRED GTM snippetom ────────────────
+     Režim „advanced": tagy sa načítajú vždy, ale kým nie je súhlas, posielajú
+     len anonymné pingy bez cookies (z tých vie GA4 aj Ads domodelovať konverzie).
+     Súhlas zbiera cookie lišta na konci stránky — tá pushne `consent update`. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+  });
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+
+  // Vrátený návštevník: jeho uloženú voľbu obnovíme ešte TU, pred načítaním GTM.
+  // Inak by tagy na prvom pageview strieľali ako „denied" a až potom by sa
+  // prepli — a ten prvý pageview by bol nenávratne stratený.
+  try {
+    var ccSaved = JSON.parse(localStorage.getItem('ht_consent') || 'null');
+    if (ccSaved && ccSaved.v === 1) {
+      gtag('consent', 'update', {
+        ad_storage:        ccSaved.marketing ? 'granted' : 'denied',
+        ad_user_data:      ccSaved.marketing ? 'granted' : 'denied',
+        ad_personalization: ccSaved.marketing ? 'granted' : 'denied',
+        analytics_storage: ccSaved.analytics ? 'granted' : 'denied'
+      });
+      dataLayer.push({
+        event: 'consent_update',
+        consent_analytics: !!ccSaved.analytics,
+        consent_marketing: !!ccSaved.marketing,
+        consent_source: 'stored'
+      });
+    }
+  } catch (e) {}
+</script>
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PT4WH8WK');</script>
+})(window,document,'script','dataLayer','GTM-PWHF5TT');</script>
 <!-- End Google Tag Manager -->
-</head>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Fallback fonty (Figtree = náhrada za Hurme Geometric Sans, Caveat = náhrada za Eldwin Script).
+     Načítajú sa len ak nie sú k dispozícii licencované brand fonty z assets/fonts/. -->
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Figtree:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT4WH8WK"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWHF5TT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<header class="head">
-  <div class="wrap head__in">
-    <a class="logo" href="#top">
-      <img class="logo__mark" src="assets/img/znak.png" alt="" width="34" height="39">
-      <span class="logo__txt">TOP <i>Liga</i><small>v malom futbale</small></span>
-    </a>
-    <div class="head__cta">
-      <span class="head__deadline">Nové tímy do <b>31. 8.</b></span>
-      <a class="btn btn--primary btn--sm" href="registracia-timu.html" data-cta="header">Prihlásiť tím</a>
+<!-- top bar -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div style="display:flex; gap:24px; flex-wrap:wrap;">
+      <span>📞 <a href="tel:+421948259191">+421 948 259 191</a></span>
+      <span><a href="mailto:office@happy-time.sk">office@happy-time.sk</a></span>
+    </div>
+    <div>Deti prijímame celoročne — rezervujte si obhliadku</div>
+  </div>
+</div>
+
+<!-- nav -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#hore"><img src="assets/logo.png" alt="Happy-Time, súkromná materská škola" style="height:56px; display:block;"></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#preco-my">O škôlke</a>
+      <a href="#triedy">Triedy</a>
+      <a href="#cennik">Cenník</a>
+      <a href="#harmonogram">Denný program</a>
+      <a href="#faq">Otázky</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="nav-cta">Rezervovať obhliadku</a>
+    </div>
+  </div>
+</nav>
+
+<!-- hero -->
+<header class="hero" id="hore">
+  <img class="dekor dekor-hero-tulipan" src="assets/dekor/tulipan.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <h1>Súkromná materská škola s rozšírenou výučbou <span>angličtiny</span> v Ružinove</h1>
+        <p>Sme súkromná materská škôlka s rozšírenou výučbou anglického jazyka v útulnom prostredí na Šumavskej ulici v Ružinove, s atraktívnym a zmysluplným programom pre detičky od 2 do 6 (7) rokov.</p>
+        <div class="hero-ctas">
+          <a href="#kontakt" class="btn btn-primary">Rezervovať obhliadku</a>
+          <a href="tel:+421948259191" class="btn btn-outline">Zavolať +421 948 259 191</a>
+        </div>
+        <div class="chips">
+          <span class="chip">🕐 12+ rokov skúseností</span>
+          <span class="chip">👧 15 detí · 2 pedagógovia</span>
+          <span class="chip">🇬🇧 Native speaker denne</span>
+          <span class="chip">✓ V sieti škôl MŠVVaŠ SR od 2017</span>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <div class="hero-img">
+          <!-- TODO: nahradiť reálnou fotkou zo škôlky od klientky (galéria je zatiaľ dočasná/stocková) -->
+          <img src="galeria/sumavska_exterier.png" alt="Budova škôlky Happy-Time na Šumavskej ulici v Ružinove">
+        </div>
+        <div class="hero-float">
+          <div class="ic">🍓</div>
+          <div>
+            <div style="font-weight:800; font-size:15px;">Prvá škôlka so smoothies</div>
+            <div style="font-size:13px; color:var(--ink-muted);">zdravá strava s ovocím a zeleninou</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
-<main id="top">
-
-<!-- =========================================================== HERO -->
-<section class="hero">
-  <div class="wrap hero__in">
-    <p class="eyebrow">Bratislava · Jeseň 2026</p>
-
-    <h1>Posledná šanca prihlásiť tím do <span class="hl">TOP Ligy.</span></h1>
-
-    <p class="lead">
-      Registrácia nových tímov končí 31. augusta.
-      Nová sezóna v Bratislave sa začne 14. septembra.
-    </p>
-
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="registracia-timu.html" data-cta="hero-team">Prihlás svoj tím</a>
+<!-- prečo my -->
+<section class="section" id="preco-my">
+  <img class="dekor dekor-preco-linka" src="assets/dekor/ciara-2.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Čo nás robí jedinečnými</div>
+      <h2>Prečo si rodičia vyberajú Happy-Time</h2>
     </div>
-
-    <div class="countdown" data-countdown>
-      <span class="countdown__label" data-cd-label>Do uzávierky zostáva</span>
-      <div class="countdown__clock">
-        <span class="cd-unit"><b data-cd="d">–</b><span>dní</span></span>
-        <span class="cd-unit"><b data-cd="h">–</b><span>hod</span></span>
-        <span class="cd-unit"><b data-cd="m">–</b><span>min</span></span>
-        <span class="cd-unit"><b data-cd="s">–</b><span>sek</span></span>
+    <div class="grid-3">
+      <div class="card">
+        <div class="ic" style="background:var(--blue);">🇬🇧</div>
+        <h3>Angličtina prirodzene a hravo</h3>
+        <p>Každá trieda má dve pani učiteľky, z toho jedna je native speaker a s deťmi komunikuje po anglicky každý deň. Deti si angličtinu osvojujú bez stresu a tlaku.</p>
       </div>
-    </div>
-
-    <div class="facts">
-      <div class="fact"><div class="fact__k">549 €</div><div class="fact__v">za tím na celú jeseň</div></div>
-      <div class="fact"><div class="fact__k">9+</div><div class="fact__v">zápasov za sezónu</div></div>
-      <div class="fact"><div class="fact__k">2×25</div><div class="fact__v">minút hrací čas</div></div>
-      <div class="fact"><div class="fact__k">120</div><div class="fact__v">tímov v Bratislave</div></div>
+      <div class="card">
+        <div class="ic" style="background:var(--sage);">👧</div>
+        <h3>Malé triedy, individuálna pozornosť</h3>
+        <p>15 detí v triede s dvoma pedagógmi, z toho jedným native speakerom, takže je dostatok priestoru pre osobný rozvoj každého dieťaťa.</p>
+      </div>
+      <div class="card">
+        <div class="ic" style="background:var(--leaf);">🥗</div>
+        <h3>Zdravá a vyvážená strava</h3>
+        <p>Dodávateľ FOODI varí z kvalitných, často regionálnych surovín, bez rafinovaného cukru a bielej múky. Zabezpečíme akúkoľvek diétu. K olovrantu naše domáce smoothies a čerstvé ovocie.</p>
+      </div>
+      <div class="card">
+        <div class="ic" style="background:var(--mint);">🧘</div>
+        <h3>Joga a dychové cvičenia denne</h3>
+        <p>Detská joga a dychové cvičenia každý deň pomáhajú deťom naštartovať deň s pokojom, sústredením a dobrou náladou.</p>
+      </div>
+      <div class="card">
+        <div class="ic" style="background:var(--sand);">🎨</div>
+        <h3>Krúžky v cene, každý deň iný</h3>
+        <p>Bystré hlavičky, Tvorivý svet, Singing star, Pohybové radosti a Let's to LEGO: tematické krúžky počas celého týždňa bez doplatkov.</p>
+      </div>
+      <div class="card">
+        <div class="ic" style="background:var(--pink);">📱</div>
+        <h3>Denný kontakt s rodičmi</h3>
+        <p>Cez aplikáciu EduPage vás informujeme o tom, čo sa v škôlke deje, vrátane fotiek z aktivít a výletov.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- =========================================================== NEMUSÍŠ RIEŠIŤ -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow">25. sezóna Niké TOP Ligy</p>
-      <h2>Prečo hrať <span class="hl">Niké TOP Ligu?</span></h2>
-      <p class="lead">
-        Pri registrácii si vyberiete preferovaný hrací deň, čas a ihrisko.
-        Po každom zápase máte k dispozícii výsledky, štatistiky a zostrihy.
-      </p>
+<!-- triedy -->
+<section class="section" id="triedy" style="background:var(--bg-2);">
+  <img class="dekor dekor-triedy-kruh" src="assets/dekor/kruh.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Rozdelenie do tried</div>
+      <h2>Štyri triedy podľa veku</h2>
+      <p style="margin:10px 0 0; color:var(--ink-soft); font-size:16px;">Každá trieda má svojho maskota a program prispôsobený veku detí, od 2 do 6 (7) rokov.</p>
     </div>
+    <div class="grid-3 grid-4">
+      <div class="card">
+        <img class="ic-img" src="assets/triedy/mravceky.svg" alt="" aria-hidden="true">
+        <h3>Mravčeky</h3>
+        <p class="age">2 – 3 roky</p>
+        <p>Citlivá adaptácia a postupné osamostatňovanie. Bezpečie, samoobslužné zručnosti a prvé sociálne kontakty.</p>
+      </div>
+      <div class="card">
+        <img class="ic-img" src="assets/triedy/vcielky.svg" alt="" aria-hidden="true">
+        <h3>Včielky</h3>
+        <p class="age">3 – 4 roky</p>
+        <p>Rozvoj jazyka v slovenčine aj angličtine, tematické ročné plány a porozumenie svetu okolo.</p>
+      </div>
+      <div class="card">
+        <img class="ic-img" src="assets/triedy/lienky.svg" alt="" aria-hidden="true">
+        <h3>Lienky</h3>
+        <p class="age">4 – 5 rokov</p>
+        <p>Matematické a jazykové základy hravou formou, empatia a spolupráca, príprava na predškolský ročník.</p>
+      </div>
+      <div class="card">
+        <img class="ic-img" src="assets/triedy/sovicky.svg" alt="" aria-hidden="true">
+        <h3>Sovičky</h3>
+        <p class="age">5 – 6 (7) rokov</p>
+        <p>Kľúčový rok prípravy na základnú školu: čítanie, písanie, matematika, samostatnosť a sebavedomie.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="split">
-      <div class="rv">
-        <p class="col-title">Tímy si vyberajú</p>
-        <ul class="checklist checklist--out">
-          <li>Preferovaný hrací deň</li>
-          <li>Čas začiatku zápasu</li>
-          <li>Ihrisko Pasienky alebo Mladá Garda</li>
+<!-- cenník -->
+<section class="section pricing" id="cennik">
+  <img class="dekor dekor-cennik-tulipan" src="assets/dekor/tulipan.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Transparentný cenník</div>
+      <h2>Vyberte si program pre vaše dieťa</h2>
+      <p>Do troch rokov veku dieťaťa máte nárok na príspevok na škôlku od štátu.</p>
+    </div>
+    <div class="grid-3">
+      <div class="price-card">
+        <h3>Poldenný program</h3>
+        <div class="sub">doobedie · ideálny na adaptáciu detí od 2–3 rokov</div>
+        <div class="price">480 € <small>/ mesiac</small></div>
+        <ul>
+          <li>Tvorivé činnosti: kreslenie, modelovanie, spievanie, tancovanie</li>
+          <li>Native speaker každý deň, hravou formou</li>
+          <li>Ranná joga a dychové cvičenia v cene</li>
+          <li>Čas a priestor na postupnú adaptáciu</li>
         </ul>
+        <a href="#kontakt" class="price-btn">Mám záujem</a>
       </div>
-      <div class="rv">
-        <p class="col-title">Každý zápas má</p>
-        <ul class="checklist checklist--in">
-          <li>Delegovaného rozhodcu</li>
-          <li>Kvalitnú hraciu plochu a osvetlenie</li>
-          <li>Výsledky, štatistiky a zostrih</li>
+      <div class="price-card featured">
+        <div class="featured-tag">NAJOBĽÚBENEJŠÍ</div>
+        <h3 style="margin-top:8px;">Celodenný program</h3>
+        <div class="sub">zábava s výučbou · plný program 5 dní v týždni</div>
+        <div class="price">570 € <small>/ mesiac</small></div>
+        <ul>
+          <li>Edukačné aktivity, pobyty vonku, exkurzie a výlety</li>
+          <li>Native speakeri, angličtina prirodzene</li>
+          <li>Detská joga a dychové cvičenia každý deň</li>
+          <li>5 krúžkov týždenne v cene, od Bystrých hlavičiek po LEGO</li>
         </ul>
+        <a href="#kontakt" class="price-btn">Rezervovať obhliadku</a>
+      </div>
+      <div class="price-card">
+        <h3>Individuálny program</h3>
+        <div class="sub">3 celé dni v týždni · pre rodičov na čiastočný úväzok</div>
+        <div class="price">430 € <small>/ mesiac</small></div>
+        <ul>
+          <li>12 dní v mesiaci (PON–STR alebo STR–PIA)</li>
+          <li>Krúžky aj joga v cene ako pri celodennom programe</li>
+          <li>Dni navyše za 36 € / deň</li>
+          <li>Flexibilný prechod na celodenný program</li>
+        </ul>
+        <a href="#kontakt" class="price-btn">Mám záujem</a>
+      </div>
+    </div>
+    <div class="price-notes">
+      <div class="price-note">
+        <span class="em">🍽</span>
+        <div><strong>Strava:</strong> celodenná 5 € / deň (desiata, obed, olovrant, pitný režim) · poldenná 4,50 € / deň (desiata, obed, pitný režim). Každá začatá hodina mimo otváracích hodín je spoplatnená sumou 10 €.</div>
+      </div>
+      <div class="price-note">
+        <span class="em">💶</span>
+        <div><strong>Príspevok od štátu:</strong> do troch rokov veku dieťaťa máte nárok na príspevok na súkromnú škôlku. <a href="https://www.pravneprerodica.sk/prispevok-na-sukromnu-skolku-jasle-opatrovatelku-pre-dieta-ako-si-ho-vybavite/" target="_blank" rel="noopener">Viac info tu</a>.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =========================================================== AKO TO FUNGUJE -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow">Registrácia</p>
-      <h2>Prihlásenie <span class="hl">nového tímu</span></h2>
-    </div>
-
-    <div class="steps rv">
-      <div class="step">
-        <div class="step__n">01</div>
-        <h3>Vyplníte registráciu</h3>
-        <p>Zadajte názov tímu a kontakt na manažéra tímu.</p>
-      </div>
-      <div class="step">
-        <div class="step__n">02</div>
-        <h3>Vyberiete termíny</h3>
-        <p>Uveďte dni, časy a preferované ihrisko.</p>
-      </div>
-      <div class="step">
-        <div class="step__n">03</div>
-        <h3>Tím zaradíme do ligy</h3>
-        <p>Podľa výkonnosti vás zaradíme medzi podobne silné tímy.</p>
-      </div>
-      <div class="step">
-        <div class="step__n">04</div>
-        <h3>Začína sa hrať</h3>
-        <p>Sezóna štartuje 14. septembra. Hrá sa 2 × 25 minút.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================== KATEGÓRIE -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow">Kategórie</p>
-      <h2>Ligy podľa <span class="hl">výkonnosti</span></h2>
-      <p class="lead">
-        Tímy sú rozdelené do 1. až 4. TOP Ligy podľa výkonnosti. Hrá sa aj TOP Liga +35.
-      </p>
-    </div>
-
-    <div class="cards cards--two">
-      <div class="card card--hot rv">
-        <span class="card__tag">Najviac tímov</span>
-        <h3>1. – 4. TOP Liga</h3>
-        <p>
-          Štyri výkonnostné úrovne pre nové aj existujúce tímy.
-        </p>
-        <a class="card__link" href="registracia-timu.html" data-cta="card-team">Prihlásiť tím →</a>
-      </div>
-
-      <div class="card rv">
-        <span class="card__tag">Ročník 1991 a skôr</span>
-        <h3>TOP Liga +35</h3>
-        <p>
-          Kategória pre hráčov narodených v roku 1991 a skôr. Hrá sa na rovnakých ihriskách,
-          len bez dvadsaťročných, ktorí bežia celý zápas.
-        </p>
-        <a class="card__link" href="registracia-timu.html" data-cta="card-35">Prihlásiť tím →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================== CENA -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow">Štartovné</p>
-      <h2>Štartovné na <span class="hl">Jeseň 2026</span></h2>
-    </div>
-
-    <div class="price">
-      <div class="price__box rv">
-        <div class="price__tier price__tier--now">
-          <span class="price__amt">549 €</span>
-          <span class="price__when">pri úhrade<br>do 31. 8. 2026</span>
+<!-- harmonogram + krúžky -->
+<section class="section" id="harmonogram">
+  <img class="dekor dekor-den-linka flip" src="assets/dekor/ciara-1.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="kicker">Deň v Happy-Time</div>
+        <h2>Ako vyzerá deň u nás</h2>
+        <div>
+          <div class="day-row"><div class="t">7:00 – 8:00</div><div class="d"><strong>Schádzanie detí</strong> v zbernej triede: hry a činnosti podľa výberu detí. Dieťa prosíme priviesť najneskôr do 8:00.</div></div>
+          <div class="day-row"><div class="t">8:00 – 12:00</div><div class="d"><strong>Ranný kruh</strong>, zdravotné a dychové cvičenia, vzdelávacia aktivita hravou formou a pobyt vonku</div></div>
+          <div class="day-row"><div class="t">12:00 – 15:00</div><div class="d"><strong>Hygiena a obed</strong>, po ňom obedný odpočinok</div></div>
+          <div class="day-row"><div class="t">15:00 – 17:30</div><div class="d"><strong>Hygiena a olovrant</strong>, vzdelávacia aktivita, krúžková činnosť a hry podľa výberu detí</div></div>
         </div>
-
-        <p class="price__math">
-          Cena je za <b>celý tím na celú jeseň</b>. Pri dvanástich hráčoch na súpiske
-          a deviatich zápasoch vychádza jeden zápas na <b>približne 5 € na hráča</b>.
-          Spolu so štartovným sa hradí <b>depozit 50 €</b>.
-        </p>
+        <div class="day-note">Vyzdvihnutie detí: pri poldennom (doobednom) pobyte 11:30 – 12:30, pri celodennom pobyte 15:30 – 17:30. Po dohovore s triednou učiteľkou je možné dieťa vyzdvihnúť aj v iný čas.</div>
       </div>
-
-      <div class="rv">
-        <p class="col-title">V štartovnom je</p>
-        <ul class="checklist checklist--in">
-          <li>Zápasy na ihrisku s osvetlením</li>
-          <li>Všetko, čo k zápasu patrí: súper, rozhodca aj lopta</li>
-          <li>Výsledky, tabuľka a štatistiky</li>
-          <li>Fotky a zostrihy z vybraných hracích dní</li>
-          <li>Ocenenia pre najlepšie tímy na Večeri s Niké TOP Ligou</li>
-          <li>Možnosť postupu na celoslovenské a celoeurópske podujatia v malom futbale</li>
-        </ul>
+      <div>
+        <div class="kicker">Každý deň niečo nové</div>
+        <h2>Krúžky v cene programu</h2>
+        <div class="clubs">
+          <div class="club"><span class="tag" style="background:var(--blue);">PON</span><div><strong>Bystré hlavičky</strong>: pre predškolákov, rozvoj zručností a vedomostí nad rámec bežných edukačných činností</div></div>
+          <div class="club"><span class="tag" style="background:var(--pink);">UT</span><div><strong>Tvorivý svet</strong>: jemná motorika a fantázia s prvkami montessori pedagogiky</div></div>
+          <div class="club"><span class="tag" style="background:var(--yellow);">STR</span><div><strong>Singing star</strong>: rytmika, hudobný sluch a spev v anglickom jazyku</div></div>
+          <div class="club"><span class="tag" style="background:var(--leaf);">ŠTV</span><div><strong>Pohybové radosti</strong>: hrubá motorika a koordinácia, senzorické koberčeky na prevenciu plochých nôh</div></div>
+          <div class="club"><span class="tag" style="background:var(--sand);">PIA</span><div><strong>Let's to LEGO</strong>: priestorové videnie, jemná motorika a technické myslenie hrou s Legom</div></div>
+          <div style="font-size:14px; color:var(--ink-muted); padding:4px 6px;">Všetky krúžky sú zahrnuté v cene, neplatia sa navyše.</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =========================================================== TERMÍNY -->
-<section class="section">
-  <div class="wrap">
-    <div class="split">
-      <div class="rv">
-        <p class="eyebrow">Kalendár</p>
-        <h2>Dôležité <span class="hl">termíny</span></h2>
-        <p class="lead" style="margin-top:20px">
-          Ak chcete hrať na jeseň, prihlášku pošlite do 31. augusta.
-        </p>
+<!-- referencie -->
+<section class="section reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Referencie</div>
+      <h2>Čo hovoria rodičia</h2>
+    </div>
+    <div class="grid-3">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>„Ako rodičia sme veľmi spokojní so škôlkou. Poskytuje moderné a čisté priestory, ktoré sú bezpečné pre deti. Kvalifikovaní a láskaví učitelia majú individuálny prístup ku každému dieťaťu. Škôlka ponúka bohatý program plný vzdelávacích a zábavných aktivít, kreatívnych dielní, športu a výletov. Naše dieťa sa do škôlky teší a domov prichádza šťastné.“</p>
+        <div class="who">Maminka Klárky</div>
       </div>
-
-      <div class="rv">
-        <ul class="timeline" data-timeline>
-          <li data-date="2026-08-31">
-            <b>31. 8.</b>
-            <span>Uzávierka registrácií nových tímov. Štartovné je 549 €.</span>
-          </li>
-          <li data-date="2026-09-14">
-            <b>14. 9.</b>
-            <span>Štart jesennej sezóny v Bratislave.</span>
-          </li>
-          <li data-date="2026-12-07">
-            <b>Dec.</b>
-            <span>Posledné zápasy sezóny sa hrajú v prvom decembrovom týždni.</span>
-          </li>
-        </ul>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>„Naše dieťa sa tu cíti veľmi dobre a bezpečne. Prostredie škôlky je moderné a čisté, čo nám ako rodičom dodáva pocit istoty. Učitelia sú nielen kvalifikovaní, ale aj mimoriadne starostliví, vrátane zahraničných učiteľov, ktorí prinášajú do vzdelávania nový rozmer. Vďaka nim naše dieťa prirodzene a hravo zvláda angličtinu.“</p>
+        <div class="who">Mamina Jakubka</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>„Naša dcérka navštevuje škôlku Happy-Time už druhý rok. Čo chceme zdôrazniť je program v škôlke, ktorý je veľmi bohatý a rozmanitý, zahŕňa vzdelávacie a zábavné aktivity, kreatívne dielne, šport a výlety. Cez aplikáciu EduPage nás informujú o tom, čo sa v škôlke deje, zasielajú sa fotky z aktivít a výletov, čo nám veľmi vyhovuje.“</p>
+        <div class="who">Rodičia Zuzky</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =========================================================== DÔKAZ -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow">Niké TOP Liga</p>
-      <h2>25. sezóna a 120 tímov <span class="hl">v Bratislave</span></h2>
-      <p class="lead">
-        Na jeseň štartuje 25. sezóna Niké TOP Ligy. V Bratislave v nej hrá okolo 120 tímov
-        v štyroch výkonnostných úrovniach.
-      </p>
-      <p class="col-title" style="margin-top:34px">Hrajú u nás</p>
-      <div class="proof" style="margin-top:0">
-        <span class="chip"><b>Robo Pukač</b></span>
-        <span class="chip"><b>Expl0ited</b></span>
-        <span class="chip"><b>Samo Kulifaj</b></span>
+<!-- galéria -->
+<section class="section" id="galeria">
+  <img class="dekor dekor-galeria-kruh" src="assets/dekor/kruh.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Fotogaléria</div>
+      <h2>Nazrite k nám do škôlky</h2>
+    </div>
+    <div class="gallery">
+      <div class="ph span2"><img src="galeria/sumavska_exterier.png" alt="Budova škôlky Happy-Time na Šumavskej ulici" loading="lazy"></div>
+      <div class="ph"><img src="galeria/vizualizacia.png" alt="Trieda a herňa v škôlke Happy-Time" loading="lazy"></div>
+      <div class="ph"><img src="galeria/kupelka.png" alt="Detská kúpeľňa s farebnými pohármi" loading="lazy"></div>
+      <div class="ph"><img src="galeria/pieskovisko.png" alt="Pieskovisko a ihrisko v areáli škôlky" loading="lazy"></div>
+      <div class="ph"><img src="galeria/fontana-exterier.png" alt="Zelený areál s fontánou a ihriskom" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <img class="dekor dekor-faq-tulipan" src="assets/dekor/tulipan.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="faq-grid">
+      <div>
+        <div class="kicker">Otázky a odpovede</div>
+        <h2>Najčastejšie otázky rodičov</h2>
+        <p class="lead">Nenašli ste odpoveď? Zavolajte nám na <a href="tel:+421948259191">+421 948 259 191</a> alebo napíšte na <a href="mailto:office@happy-time.sk">office@happy-time.sk</a>, radi vám všetko ukážeme aj osobne.</p>
+        <a href="#kontakt" class="btn btn-primary" style="margin-top:10px;">Rezervovať obhliadku</a>
       </div>
-
-      <p class="col-title" style="margin-top:26px">Partneri</p>
-      <div class="proof" style="margin-top:0">
-        <span class="chip"><b>Niké</b> — generálny partner</span>
-        <span class="chip"><b>Macron</b></span>
-        <span class="chip"><b>Šport.sk</b></span>
+      <div class="faq-list">
+        <details>
+          <summary>Od akého veku prijímate deti?</summary>
+          <p>Prijímame detičky od 2 rokov do 6 (7) rokov. Nástup je možný aj v priebehu školského roka, najlepšie však dieťatku padne, keď začne od septembra.</p>
+        </details>
+        <details>
+          <summary>Ako prebieha zápis?</summary>
+          <p>Deti prijímame celoročne. Stačí vyplniť kontaktný formulár nižšie a my sa vám v čo najkratšom čase ozveme. Informácie o potrebných dokladoch vám radi poskytneme osobne pri obhliadke.</p>
+        </details>
+        <details>
+          <summary>Aké sú otváracie hodiny?</summary>
+          <p>Škôlka je otvorená pondelok až piatok od 7:00 do 17:30. Ranný príchod detí je od 7:00 do 8:00. Deti vyzdvihujete pri poldennom pobyte medzi 11:30 a 12:30, pri celodennom medzi 15:30 a 17:30 (po dohovore s triednou učiteľkou aj v iný čas). Každá začatá hodina mimo otváracích hodín je spoplatnená sumou 10 €.</p>
+        </details>
+        <details>
+          <summary>Platí sa angličtina alebo krúžky navyše?</summary>
+          <p>Nie. Native speakeri, denná joga s dychovými cvičeniami aj všetkých päť tematických krúžkov je zahrnutých v cene programu.</p>
+        </details>
+        <details>
+          <summary>Máme nárok na príspevok od štátu?</summary>
+          <p>Áno, do troch rokov veku dieťaťa máte nárok na príspevok na škôlku od štátu. <a href="https://www.pravneprerodica.sk/prispevok-na-sukromnu-skolku-jasle-opatrovatelku-pre-dieta-ako-si-ho-vybavite/" target="_blank" rel="noopener" style="font-weight:700;">Viac informácií tu</a>.</p>
+        </details>
+        <details>
+          <summary>Je škôlka oficiálne zaradená do siete škôl?</summary>
+          <p>Áno, od 1. 9. 2017 je SMŠ HAPPY-TIME zaradená do siete škôl a školských zariadení SR Ministerstvom školstva, vedy, výskumu a športu SR.</p>
+        </details>
       </div>
     </div>
-
-    <!-- TODO: nahradiť reálnymi fotkami zo zápasov (zložka assets/img).
-         Odporúčam 3 fotky: oslava po góle, súboj 1 na 1, tímová fotka s pohárom. -->
   </div>
 </section>
 
-<!-- =========================================================== FAQ -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head rv">
-      <p class="eyebrow">Pred prihlásením</p>
-      <h2>Čo potrebujete <span class="hl">vedieť</span></h2>
-    </div>
-
-    <div class="faq rv">
-      <details>
-        <summary>Nikdy sme nehrali ligu. Má to pre nás zmysel?</summary>
-        <p>
-          Áno. V prihláške tím ohodnotíte a podľa toho ho zaradíme. Sú štyri výkonnostné úrovne,
-          aby ste nehrali proti tímom, ktoré sú úplne niekde inde.
-        </p>
-      </details>
-
-      <details>
-        <summary>Kedy a kde sa hrá?</summary>
-        <p>
-          Hracie dni sú pondelok až piatok, zápasy sa hrajú v časoch medzi 18:00 a 22:00
-          na ihriskách Pasienky a Mladá Garda v Novom Meste. Obe ihriská majú umelé osvetlenie.
-        </p>
-      </details>
-
-      <details>
-        <summary>Nevieme hrať každý deň. Dá sa to zohľadniť?</summary>
-        <p>
-          Áno. Po prvom kontakte si cez krátky formulár vyberiete dni a časy, ktoré vám vyhovujú.
-          Potrebujeme aspoň dve možnosti, aby sa vám dal spraviť rozpis.
-        </p>
-      </details>
-
-      <details>
-        <summary>Koľko ľudí potrebujeme?</summary>
-        <p>
-          Hrá sa malý futbal. Na celú jeseň sa oplatí mať na súpiske desať až dvanásť hráčov.
-          Keď niekto vypadne, nebudete pred každým zápasom zháňať náhradníkov.
-        </p>
-      </details>
-
-      <details>
-        <summary>Nemám tím, chcem len hrať. Čo s tým?</summary>
-        <p>
-          Vyplň registráciu jednotlivca. Buď ťa pridáme do existujúceho tímu, ktorému chýbajú hráči,
-          alebo z jednotlivcov poskladáme úplne nový tím tak, aby fungoval celú sezónu.
-          Takto v Niké TOP Lige vzniklo už viac ako 30 tímov.
-        </p>
-      </details>
-
-      <details>
-        <summary>Chceme prihlásiť tím z firmy. Je to možné?</summary>
-        <p>
-          Jasné. Prihláste sa ako tím. Stačí, aby bol jeden z vás kontaktnou osobou
-          pre termíny a súpisku.
-        </p>
-      </details>
-
-      <details>
-        <summary>Ako a kedy sa platí?</summary>
-        <p>
-          Štartovné a depozit sa platia prevodom na účet SK71 1100 0000 0029 4808 2978.
-          Prihlášky nových tímov prijímame do 31. 8. 2026. Štartovné je 549 € a depozit 50 €.
-        </p>
-      </details>
-
-      <details>
-        <summary>Čo ak sa prihlásim a tím sa nakoniec nedá dokopy?</summary>
-        <p>
-          Ozvi sa nám čo najskôr. Ak sa tím rozpadne pred rozlosovaním, skúsime hráčov presunúť
-          do iných tímov alebo ich zaradiť medzi jednotlivcov. Horšie je mlčať do prvého kola.
-        </p>
-      </details>
+<!-- kontakt -->
+<section class="section contact" id="kontakt">
+  <img class="dekor dekor-kontakt-linka" src="assets/dekor/ciara-2.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="kicker">Kontakt</div>
+        <h2>Príďte na nezáväznú obhliadku</h2>
+        <p class="lead">Najlepšie sa presvedčíte osobne. Nechajte nám kontakt a dohodneme si termín, ktorý vám vyhovuje.</p>
+        <div class="contact-items">
+          <div class="contact-item"><span class="ic">📍</span><span><strong>Šumavská 34</strong>, 821 08 Bratislava – Ružinov</span></div>
+          <div class="contact-item"><span class="ic">📞</span><a href="tel:+421948259191">+421 948 259 191</a></div>
+          <div class="contact-item"><span class="ic">✉️</span><span><a href="mailto:office@happy-time.sk">office@happy-time.sk</a> · <a href="mailto:riaditelka@happy-time.sk">riaditelka@happy-time.sk</a></span></div>
+          <div class="contact-item"><span class="ic">👩‍🏫</span><span>riaditeľka: <strong>Dominika Molnárová</strong> · asistentka riaditeľa: <strong>Veronika Vartovníková</strong></span></div>
+          <div class="contact-item"><span class="ic">🕐</span><span>otváracie hodiny: <strong>pondelok – piatok, 7:00 – 17:30</strong></span></div>
+          <div class="contact-item"><span class="ic">💬</span><span><a href="https://www.facebook.com/SukromnaMaterskaSkolkaHappyTime" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/smshappytime/" target="_blank" rel="noopener">Instagram</a></span></div>
+        </div>
+        <iframe src="https://maps.google.com/maps?q=%C5%A0umavsk%C3%A1%2034%2C%20821%2008%20Bratislava&z=15&output=embed" loading="lazy" title="Mapa: Šumavská 34, Bratislava"></iframe>
+      </div>
+      <div class="form-card">
+        <form id='lead-form' method='POST' name='rezervacia-obhliadky' data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="rezervacia-obhliadky">
+          <p hidden><label>Toto pole nevypĺňajte: <input name="bot-field"></label></p>
+          <!-- Atribúcia leadu — vypĺňa sa automaticky z URL (viď assets/js/main.js).
+               Príde v Netlify notifikácii spolu s leadom, aby sa dal neskôr spárovať
+               so zápisom a nahrať do Google Ads ako offline konverzia. -->
+          <input type="hidden" name="gclid"><input type="hidden" name="gbraid"><input type="hidden" name="wbraid">
+          <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
+          <input type="hidden" name="referrer"><input type="hidden" name="landing_page">
+          <h3>Rezervácia obhliadky</h3>
+          <div class="form-row">
+            <input name="meno" placeholder="Meno a priezvisko" required>
+            <input name="telefon" type="tel" placeholder="Telefón" required>
+          </div>
+          <div class="form-row">
+            <input name="email" type="email" placeholder="E-mail" required>
+            <input name="vek_dietata" placeholder="Vek dieťaťa">
+          </div>
+          <div class="field">
+            <select name="program">
+              <option value="">Mám záujem o… (vyberte program)</option>
+              <option>Celodenný program · 570 €/mes.</option>
+              <option>Poldenný program · 480 €/mes.</option>
+              <option>Individuálny program · 430 €/mes.</option>
+              <option>Zatiaľ neviem, chcem sa poradiť</option>
+            </select>
+          </div>
+          <textarea name="sprava" placeholder="Správa (nepovinné), napr. vek dieťaťa, preferovaný termín obhliadky"></textarea>
+          <label class="gdpr"><input type="checkbox" name="gdpr" required><span>Súhlasím so spracovaním osobných údajov (<a href="https://happy-time.sk/gdpr" target="_blank" rel="noopener">GDPR</a>).</span></label>
+          <button type="submit">Odoslať a dohodnúť termín</button>
+          <div class="form-note">Ozveme sa vám v čo najkratšom čase.</div>
+          <div class="form-error" id="form-error" hidden>Správu sa nepodarilo odoslať. Skúste to prosím znova alebo nám zavolajte na <a href="tel:+421948259191">+421 948 259 191</a>.</div>
+        </form>
+        <div class="form-thanks" id="form-thanks">
+          <div class="em">🎉</div>
+          <h3>Ďakujeme!</h3>
+          <p>Vašu žiadosť sme prijali. Ozveme sa vám v čo najkratšom čase a dohodneme termín obhliadky.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- =========================================================== ZÁVEREČNÉ CTA -->
-<section class="section final">
-  <div class="wrap">
-    <p class="eyebrow" style="color:#0a0a0a">Jeseň 2026</p>
-      <h2>Nové tímy sa môžu prihlásiť do <span class="hl">31. augusta.</span></h2>
-    <p class="lead">
-      Sezóna Niké TOP Ligy v Bratislave štartuje 14. septembra.
-    </p>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="registracia-timu.html" data-cta="final-team">Prihlás svoj tím</a>
+<!-- footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div>© Happy-Time · Všetky práva vyhradené · <a href="https://happy-time.sk/gdpr" target="_blank" rel="noopener">Ochrana osobných údajov</a> · <button type="button" class="cc-link" id="cc-reopen" style="color:var(--ink);">Nastavenia cookies</button></div>
+      <div style="margin-top:8px;">Zriaďovateľ: Občianske združenie Šťastná škôlka / HAPPY-TIME, Levárska 11, Bratislava<br>IČO: 42362661 · DIČ: 2024181115 · <a href="mailto:zriadovatel@happy-time.sk">zriadovatel@happy-time.sk</a></div>
     </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="foot">
-  <div class="wrap foot__in">
-    <span>Niké TOP Liga v malom futbale · Bratislava · Jeseň 2026</span>
-    <!-- Kontakt: finálny notifikačný e-mail. -->
-    <span>
-      <a href="mailto:juraj.supak@malyfutbal.sk">juraj.supak@malyfutbal.sk</a> ·
-      <a href="https://topliga.sk" target="_blank" rel="noopener">topliga.sk</a>
-    </span>
+    <div class="eu">Projekt „Zvýšenie kapacity materskej školy Šumavská“ je financovaný zo zdrojov EÚ a štátneho rozpočtu, poskytovateľom MPRV SR.</div>
   </div>
 </footer>
 
-<!-- lepiaca lišta na mobile -->
-<div class="dock" data-dock>
-  <div class="dock__left">Uzávierka<b data-dock-days>–</b></div>
-  <a class="btn btn--primary btn--sm" href="registracia-timu.html" data-cta="dock-team">Prihlásiť tím</a>
+<!-- ── cookie lišta ──────────────────────────────────────────────────────────
+     Zobrazí sa len tomu, kto ešte nerozhodol. Voľba sa drží v localStorage
+     a obnovuje sa v <head> ešte pred GTM. -->
+<div class="cc" id="cookie-consent" role="dialog" aria-labelledby="cc-title" aria-describedby="cc-text" tabindex="-1" hidden>
+  <div class="cc-card">
+    <div class="cc-main">
+      <h2 class="cc-title" id="cc-title">Používame cookies</h2>
+      <p class="cc-text" id="cc-text">Nevyhnutné cookies potrebujeme na fungovanie stránky. S vaším súhlasom
+        používame aj analytické a marketingové — pomáhajú nám ukázať škôlku ďalším rodinám v okolí. Voľbu
+        zmeníte kedykoľvek v pätičke, podrobnosti v
+        <a href="https://happy-time.sk/gdpr" target="_blank" rel="noopener">ochrane osobných údajov</a>.</p>
+      <div class="cc-prefs" id="cc-prefs" hidden>
+        <div class="cc-row">
+          <input type="checkbox" id="cc-necessary" checked disabled>
+          <label for="cc-necessary"><strong>Nevyhnutné</strong><span>Potrebné na fungovanie stránky a odoslanie formulára. Nedajú sa vypnúť.</span></label>
+        </div>
+        <div class="cc-row">
+          <input type="checkbox" id="cc-analytics">
+          <label for="cc-analytics"><strong>Analytické</strong><span>Anonymné údaje o tom, ktoré časti stránky rodičov zaujímajú.</span></label>
+        </div>
+        <div class="cc-row">
+          <input type="checkbox" id="cc-marketing">
+          <label for="cc-marketing"><strong>Marketingové</strong><span>Umožňujú merať účinnosť reklamy a zobraziť ju rodinám v okolí škôlky.</span></label>
+        </div>
+        <button type="button" class="cc-btn cc-save" id="cc-save">Uložiť moju voľbu</button>
+      </div>
+    </div>
+    <div class="cc-actions">
+      <button type="button" class="cc-btn cc-accept" id="cc-accept">Prijať všetko</button>
+      <button type="button" class="cc-btn cc-reject" id="cc-reject">Odmietnuť</button>
+      <button type="button" class="cc-link" id="cc-settings" aria-expanded="false" aria-controls="cc-prefs">Nastavenia</button>
+    </div>
+  </div>
 </div>
 
 <script src="assets/js/main.js"></script>
