@@ -1,0 +1,57 @@
+HAPPY-TIME — landing page
+
+Statická stránka bez databázy a bez zostavovania (build).
+HTML, CSS a JavaScript sú samostatné súbory:
+  index.html             — obsah, ceny, kontakty, formulár a GTM
+  assets/css/style.css   — vzhľad, responzivita a definície fontov
+  assets/js/main.js      — formulár, animácie, menu, cookies a meranie udalostí
+  assets/                — logo, ilustrácie a priečinok pre fonty
+  galeria/               — fotografie
+  netlify.toml           — pravidlá cache pre /assets/* a /galeria/*
+
+PUBLIKOVANIE NA NETLIFY
+1. Pripojte repozitár k projektu v Netlify.
+2. Pre túto štruktúru nastavte koreň projektu ako publish directory (.).
+   Build command nechajte prázdny; stránka nemá build krok.
+3. Publikujte projekt spolu s index.html, assets/, galeria/, robots.txt
+   a netlify.toml. Pravidlá cache sú uložené v netlify.toml;
+   tento súbor nemení build nastavenia ani nepridáva pravidlá indexovania.
+4. V Netlify Forms zapnite detekciu formulárov a následne znovu publikujte.
+   Overte, že Netlify rozpoznalo formulár rezervacia-obhliadky.
+5. Nastavte e-mailové notifikácie formulára a overte skúšobné odoslanie.
+
+Formulár používa Netlify Forms (POST na /). Na inom hostingu treba
+prispôsobiť spracovanie formulára aj nastavenie HTTP cache.
+Samotný lokálny náhľad nedokáže overiť prijatie formulára v Netlify.
+
+ÚPRAVY A CACHE
+- Texty, ceny a kontakty: index.html.
+- Vzhľad: assets/css/style.css. Správanie: assets/js/main.js.
+- Fotografie: galeria/. Logo a ilustrácie: assets/.
+- /assets/* a /galeria/* majú cache jeden rok (31536000 sekúnd)
+  s príznakom immutable. Platí to aj pre samostatné CSS a JavaScript.
+- Pri zmene už publikovaného súboru v týchto priečinkoch zmeňte jeho
+  názov a aktualizujte všetky odkazy naň. Napríklad fotografiu uložte
+  ako galeria/pieskovisko-v2.png a upravte jej src v index.html.
+- Pri zmene style.css alebo main.js použite novú verziu názvu súboru
+  a upravte príslušný link alebo script v index.html. Ak zmena obrázka
+  či fontu vyžaduje úpravu CSS, zmeňte aj URL upraveného CSS súboru.
+  Samotné prepísanie súboru pod rovnakou URL neobnoví cache prehliadača.
+- HTML nie je zahrnuté v týchto pravidlách ročnej cache.
+
+FONTY A DOPLNKOVÁ ILUSTRÁCIA
+- Fonty Hurme Geometric Sans a Eldwin Script sa očakávajú v assets/fonts/.
+  Súbory fontov nie sú súčasťou projektu; presný postup a názvy sú
+  v assets/fonts/README.txt. Dovtedy sa používajú Figtree a Caveat.
+- assets/dekor/stromcek.svg je doplnková ilustrácia zo ZIP balíka.
+  Je pripravená na použitie, ale zatiaľ nie je vložená do stránky.
+
+MERANIE A INDEXOVANIE
+Aktuálny Google Tag Manager: GTM-PWHF5TT.
+Stránka má vlastný panel cookies (Consent Mode v2) a udalosti v dataLayer.
+Indexovanie je obmedzené cez robots.txt a meta robots v index.html.
+
+DOKUMENTÁCIA NETLIFY
+https://docs.netlify.com/build/configure-builds/file-based-configuration/
+https://docs.netlify.com/manage/routing/headers/
+https://docs.netlify.com/manage/forms/setup/
