@@ -1,0 +1,11 @@
+# Ročná cache pre statické súbory. Pri zmene obsahu zmeňte aj URL súboru
+# a odkazy naň (pozri CITAJ-MA.txt), aby návštevníci dostali novú verziu.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/galeria/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
