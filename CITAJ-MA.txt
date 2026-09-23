@@ -4,7 +4,7 @@ Statická stránka bez databázy a bez zostavovania (build).
 HTML, CSS a JavaScript sú samostatné súbory:
   index.html             — obsah, ceny, kontakty, formulár a GTM
   assets/css/style.css   — vzhľad, responzivita a definície fontov
-  assets/js/main.js      — formulár, animácie, menu, cookies a meranie udalostí
+  assets/js/main-v2.js   — formulár, animácie, menu, cookies a meranie udalostí
   assets/                — logo, ilustrácie a priečinok pre fonty
   galeria/               — fotografie
   netlify.toml           — pravidlá cache pre /assets/* a /galeria/*
@@ -26,14 +26,14 @@ Samotný lokálny náhľad nedokáže overiť prijatie formulára v Netlify.
 
 ÚPRAVY A CACHE
 - Texty, ceny a kontakty: index.html.
-- Vzhľad: assets/css/style.css. Správanie: assets/js/main.js.
+- Vzhľad: assets/css/style.css. Správanie: assets/js/main-v2.js.
 - Fotografie: galeria/. Logo a ilustrácie: assets/.
 - /assets/* a /galeria/* majú cache jeden rok (31536000 sekúnd)
   s príznakom immutable. Platí to aj pre samostatné CSS a JavaScript.
 - Pri zmene už publikovaného súboru v týchto priečinkoch zmeňte jeho
   názov a aktualizujte všetky odkazy naň. Napríklad fotografiu uložte
   ako galeria/pieskovisko-v2.png a upravte jej src v index.html.
-- Pri zmene style.css alebo main.js použite novú verziu názvu súboru
+- Pri zmene style.css alebo main-v2.js použite novú verziu názvu súboru
   a upravte príslušný link alebo script v index.html. Ak zmena obrázka
   či fontu vyžaduje úpravu CSS, zmeňte aj URL upraveného CSS súboru.
   Samotné prepísanie súboru pod rovnakou URL neobnoví cache prehliadača.

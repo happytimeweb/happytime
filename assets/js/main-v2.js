@@ -7,17 +7,29 @@
 /* ── formulár + reveal + mobilné menu ─────────────────────────────────────── */
 (function () {
   // formulár ide cez Netlify Forms (POST na "/" s form-name), aby ostala ďakovná obrazovka
-  var leadForm = document.getElementById('lead-form');
+  const leadForm = document.getElementById('lead-form');
   if (leadForm) {
+    // Skryté polia atribúcie (gclid, utm_*) sa odosielajú len ak naozaj niečo obsahujú.
+    // Prázdne by inak chodili do notifikačného e-mailu ako prázdne riadky.
+    const payloadOf = function (form) {
+      const params = new URLSearchParams();
+      new FormData(form).forEach(function (value, key) {
+        const field = form.elements[key];
+        const emptyHidden = field && field.type === 'hidden' && String(value).trim() === '';
+        if (!emptyHidden) { params.append(key, value); }
+      });
+      return params.toString();
+    };
+
     leadForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var form = this;
-      var btn = form.querySelector('button[type="submit"]');
-      var err = document.getElementById('form-error');
+      const form = this;
+      const btn = form.querySelector('button[type="submit"]');
+      const err = document.getElementById('form-error');
       err.hidden = true;
       btn.disabled = true;
       btn.textContent = 'Odosielam…';
-      var lead = {
+      const lead = {
         form_name: 'rezervacia_obhliadky',
         program: (form.program.value || '(nevybraté)'),
         vek_dietata: (form.vek_dietata.value || '(nevyplnené)'),
@@ -27,7 +39,7 @@
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
+        body: payloadOf(form)
       }).then(function (res) {
         if (!res.ok) { throw new Error('HTTP ' + res.status); }
         form.style.display = 'none';
@@ -53,7 +65,7 @@
   }
   // scroll-reveal animácie
   (function () {
-    var items = document.querySelectorAll('.section-head, .card, .price-card, .price-note, .two-col > div, .review, .gallery .ph, .faq-grid > div, .faq-list details, .contact-grid > div');
+    const items = document.querySelectorAll('.section-head, .card, .price-card, .price-note, .two-col > div, .review, .gallery .ph, .faq-grid > div, .faq-list details, .contact-grid > div');
     items.forEach(function (el) { el.classList.add('reveal'); });
     // stagger v rámci spoločného rodiča
     document.querySelectorAll('.grid-3, .gallery, .price-notes, .faq-list').forEach(function (group) {
@@ -61,7 +73,7 @@
         el.style.setProperty('--d', (i * 0.08) + 's');
       });
     });
-    var io = new IntersectionObserver(function (entries) {
+    const io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
       });
@@ -80,15 +92,15 @@
    Zobrazí sa len tomu, kto ešte nerozhodol. Voľba sa drží v localStorage
    a obnovuje sa v <head> ešte pred GTM. */
 (function () {
-  var KEY = 'ht_consent', VERSION = 1;
-  var box = document.getElementById('cookie-consent');
+  const KEY = 'ht_consent', VERSION = 1;
+  const box = document.getElementById('cookie-consent');
   if (!box) return;
-  var prefs = document.getElementById('cc-prefs');
-  var chkA = document.getElementById('cc-analytics');
-  var chkM = document.getElementById('cc-marketing');
-  var btnSettings = document.getElementById('cc-settings');
+  const prefs = document.getElementById('cc-prefs');
+  const chkA = document.getElementById('cc-analytics');
+  const chkM = document.getElementById('cc-marketing');
+  const btnSettings = document.getElementById('cc-settings');
 
-  var saved = null;
+  let saved = null;
   try { saved = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
 
   // Uloží voľbu, pošle ju Consent Mode a oznámi ju do dataLayeru.
@@ -138,7 +150,7 @@
    len push do dataLayeru. */
 (function () {
   window.dataLayer = window.dataLayer || [];
-  var dl = function (o) { window.dataLayer.push(o); };
+  const dl = function (o) { window.dataLayer.push(o); };
 
   // v ktorej sekcii stránky sa kliklo (jednostránkový web nemá page path)
   function whereIs(el) {
@@ -149,7 +161,7 @@
     if (el.closest('.faq')) return 'faq';
     if (el.closest('.contact')) return 'kontakt';
     if (el.closest('.footer')) return 'footer';
-    var s = el.closest('section[id]');
+    const s = el.closest('section[id]');
     return s ? s.id : 'body';
   }
   function txt(el) { return (el.innerText || el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 100); }
@@ -157,12 +169,13 @@
   // ── 1. Atribúcia: gclid + utm do skrytých polí formulára ───────────────────
   // Uloží sa aj do sessionStorage, aby prežila scroll/reload v rámci návštevy.
   (function () {
-    var KEYS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
-    var q = new URLSearchParams(location.search), store = {};
+    const KEYS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+    const q = new URLSearchParams(location.search);
+    let store = {};
     try { store = JSON.parse(sessionStorage.getItem('ht_attr') || '{}'); } catch (e) { store = {}; }
     KEYS.forEach(function (k) { if (q.get(k)) { store[k] = q.get(k); } });
     try { sessionStorage.setItem('ht_attr', JSON.stringify(store)); } catch (e) {}
-    var form = document.getElementById('lead-form');
+    const form = document.getElementById('lead-form');
     if (!form) return;
     KEYS.forEach(function (k) { if (form[k]) { form[k].value = store[k] || ''; } });
     if (form.referrer) { form.referrer.value = document.referrer || '(direct)'; }
@@ -177,10 +190,10 @@
 
   // ── 2. Kliky na odkazy — telefón, e-mail, PDF, CTA, odchody ────────────────
   document.addEventListener('click', function (e) {
-    var a = e.target.closest('a[href]');
+    const a = e.target.closest('a[href]');
     if (!a) return;
-    var href = a.getAttribute('href') || '';
-    var loc = whereIs(a);
+    const href = a.getAttribute('href') || '';
+    const loc = whereIs(a);
 
     if (href.indexOf('tel:') === 0) {
       dl({ event: 'phone_click', link_url: href, click_text: txt(a), click_location: loc });
@@ -194,7 +207,7 @@
     } else if (href.charAt(0) === '#') {
       if (href === '#hore') return;                                            // logo, nie CTA
       if (a.closest('.nav-links') && !a.classList.contains('nav-cta')) return; // navigáciu netrackujeme, je to šum
-      var card = a.closest('.price-card');
+      const card = a.closest('.price-card');
       dl({
         event: 'cta_click', cta_text: txt(a), cta_location: loc, cta_target: href.slice(1),
         cta_program: card ? txt(card.querySelector('h3')) : '(not set)'
@@ -206,7 +219,8 @@
 
   // ── 3. Formulár: form_start (prvý dotyk poľa, raz za návštevu) ─────────────
   (function () {
-    var form = document.getElementById('lead-form'), started = false;
+    const form = document.getElementById('lead-form');
+    let started = false;
     if (!form) return;
     form.addEventListener('focusin', function () {
       if (started) return;
@@ -226,10 +240,10 @@
 
   // ── 5. Prejdené sekcie — náhrada za funnel, keďže je to one-pager ─────────
   (function () {
-    var seen = {};
-    var sections = document.querySelectorAll('section[id], header[id]');
+    const seen = {};
+    const sections = document.querySelectorAll('section[id], header[id]');
     if (!('IntersectionObserver' in window)) return;
-    var io = new IntersectionObserver(function (entries) {
+    const io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting || seen[en.target.id]) return;
         seen[en.target.id] = true;

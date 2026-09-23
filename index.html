@@ -35,7 +35,7 @@
   // Inak by tagy na prvom pageview strieľali ako „denied" a až potom by sa
   // prepli — a ten prvý pageview by bol nenávratne stratený.
   try {
-    var ccSaved = JSON.parse(localStorage.getItem('ht_consent') || 'null');
+    let ccSaved = JSON.parse(localStorage.getItem('ht_consent') || 'null');
     if (ccSaved && ccSaved.v === 1) {
       gtag('consent', 'update', {
         ad_storage:        ccSaved.marketing ? 'granted' : 'denied',
@@ -421,7 +421,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <form id='lead-form' method='POST' name='rezervacia-obhliadky' data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="rezervacia-obhliadky">
           <p hidden><label>Toto pole nevypĺňajte: <input name="bot-field"></label></p>
-          <!-- Atribúcia leadu — vypĺňa sa automaticky z URL (viď assets/js/main.js).
+          <!-- Atribúcia leadu — vypĺňa sa automaticky z URL (viď assets/js/main-v2.js).
                Príde v Netlify notifikácii spolu s leadom, aby sa dal neskôr spárovať
                so zápisom a nahrať do Google Ads ako offline konverzia. -->
           <input type="hidden" name="gclid"><input type="hidden" name="gbraid"><input type="hidden" name="wbraid">
@@ -508,6 +508,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main-v2.js"></script>
 </body>
 </html>
